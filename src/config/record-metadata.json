@@ -1,0 +1,624 @@
+{
+  "EmissionFacility": {
+    "name": "EmissionFacility",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "permitNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "operator",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "jurisdiction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "address",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "reportingYear",
+        "kind": "number",
+        "required": true,
+        "integer": true,
+        "min": 0
+      },
+      {
+        "name": "openedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      }
+    ]
+  },
+  "EmissionUnit": {
+    "name": "EmissionUnit",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "unitCode",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "process",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "fuelType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "commissionedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "capacity",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "PermitCondition": {
+    "name": "PermitCondition",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "pollutant",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "limitValue",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "unit",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "averagingPeriod",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "ruleVersion",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "ActivityReading": {
+    "name": "ActivityReading",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionUnitId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionUnit"
+      },
+      {
+        "name": "observedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "quantity",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "unit",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "source",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "EmissionFactor": {
+    "name": "EmissionFactor",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionUnitId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionUnit"
+      },
+      {
+        "name": "pollutant",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "factor",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "unit",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "sourceVersion",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "StackTest": {
+    "name": "StackTest",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionUnitId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionUnit"
+      },
+      {
+        "name": "testedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "pollutant",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "measuredValue",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "unit",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "laboratory",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "ControlDevice": {
+    "name": "ControlDevice",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionUnitId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionUnit"
+      },
+      {
+        "name": "deviceType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "inspectionAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "observations",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "nextDueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "DeviationEvent": {
+    "name": "DeviationEvent",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionUnitId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionUnit"
+      },
+      {
+        "name": "startedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "endedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "cause",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "correctiveAction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "EmissionReport": {
+    "name": "EmissionReport",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "periodStart",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "periodEnd",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "preparer",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "calculationReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "submissionReceipt",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "OperationalTask": {
+    "name": "OperationalTask",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "priority",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "done",
+        "kind": "boolean",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "RuleVersion": {
+    "name": "RuleVersion",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "jurisdiction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "version",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expiresAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "sourceUrl",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requirementText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  },
+  "DocumentRequirement": {
+    "name": "DocumentRequirement",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "category",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requiredBy",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidenceReference",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "reviewNotes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "emissionFacilityId",
+        "kind": "string",
+        "required": true,
+        "relation": "EmissionFacility"
+      }
+    ],
+    "parent": {
+      "entity": "EmissionFacility",
+      "field": "emissionFacilityId"
+    }
+  }
+}

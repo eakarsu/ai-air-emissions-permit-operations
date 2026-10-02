@@ -1,0 +1,365 @@
+// Generated schema — modeled after beautyhqio conventions.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  active       Boolean @default(true)
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(ANALYST)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  ANALYST
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actorName String?
+  action    String
+  entity    String
+  entityId  String?
+  detail    String?
+  createdAt DateTime @default(now())
+}
+
+model WorkflowAnalysis {
+ id String @id @default(cuid())
+ actorId String
+ workflow String
+ subjectEntity String
+ subjectId String
+ input Json
+ evidence Json
+ evidenceHash String
+ result Json
+ model String
+ receipt String?
+ createdAt DateTime @default(now())
+ @@index([workflow, createdAt])
+}
+model RecordReview {
+ id String @id @default(cuid())
+ actorId String
+ entity String
+ entityId String
+ version String
+ reason String
+ createdAt DateTime @default(now())
+ @@unique([entity, entityId, version, actorId])
+}
+model UsageBucket {
+ id String @id
+ calls Int
+}
+model IssuedCredential {
+ token String @id
+ entity String
+ entityId String
+ version String
+ assertion Json
+ createdAt DateTime @default(now())
+ revokedAt DateTime?
+ @@index([entity, entityId, createdAt])
+}
+
+model DomainArtifact {
+ id String @id @default(cuid())
+ subjectEntity String
+ subjectId String
+ title String
+ content String
+ contentHash String
+ actorId String
+ approvedBy String?
+ createdAt DateTime @default(now())
+ @@index([subjectEntity, subjectId])
+}
+
+model RecordApproval {
+ id String @id
+ version String
+}
+model DomainExecution {
+ id String @id
+ actorId String
+ connectorId String
+ action String
+ subjectEntity String
+ subjectId String
+ version String
+ status String
+ result Json?
+ createdAt DateTime @default(now())
+}
+
+model WorkSession {
+ id String @id @default(cuid())
+ actorId String
+ respondentId String
+ subjectEntity String
+ subjectId String
+ questions Json
+ answers Json
+ currentQuestion String?
+ status String
+ deadline DateTime
+ createdAt DateTime @default(now())
+ @@index([respondentId, createdAt])
+}
+model SessionMedia {
+ id String @id @default(cuid())
+ sessionId String
+ questionId String
+ actorId String
+ contentType String
+ bytes Bytes
+ contentHash String
+ createdAt DateTime @default(now())
+ @@index([sessionId])
+}
+
+model AppSetting {
+ id String @id
+ value Json
+ updatedAt DateTime @updatedAt
+}
+
+model EmissionFacility {
+ id String @id @default(cuid())
+ name String
+ permitNumber String
+ operator String
+ jurisdiction String
+ address String
+ reportingYear Int
+ openedAt DateTime
+ status String @default("Draft")
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ inverseEmissionUnit_emissionFacilityId EmissionUnit[] @relation("EmissionUnit_emissionFacilityId")
+ inversePermitCondition_emissionFacilityId PermitCondition[] @relation("PermitCondition_emissionFacilityId")
+ inverseActivityReading_emissionFacilityId ActivityReading[] @relation("ActivityReading_emissionFacilityId")
+ inverseEmissionFactor_emissionFacilityId EmissionFactor[] @relation("EmissionFactor_emissionFacilityId")
+ inverseStackTest_emissionFacilityId StackTest[] @relation("StackTest_emissionFacilityId")
+ inverseControlDevice_emissionFacilityId ControlDevice[] @relation("ControlDevice_emissionFacilityId")
+ inverseDeviationEvent_emissionFacilityId DeviationEvent[] @relation("DeviationEvent_emissionFacilityId")
+ inverseEmissionReport_emissionFacilityId EmissionReport[] @relation("EmissionReport_emissionFacilityId")
+ inverseOperationalTask_emissionFacilityId OperationalTask[] @relation("OperationalTask_emissionFacilityId")
+ inverseRuleVersion_emissionFacilityId RuleVersion[] @relation("RuleVersion_emissionFacilityId")
+ inverseDocumentRequirement_emissionFacilityId DocumentRequirement[] @relation("DocumentRequirement_emissionFacilityId")
+}
+
+model EmissionUnit {
+ id String @id @default(cuid())
+ name String
+ unitCode String
+ process String
+ fuelType String
+ commissionedAt DateTime
+ capacity Float
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionFacilityId EmissionFacility @relation("EmissionUnit_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+ inverseActivityReading_emissionUnitId ActivityReading[] @relation("ActivityReading_emissionUnitId")
+ inverseEmissionFactor_emissionUnitId EmissionFactor[] @relation("EmissionFactor_emissionUnitId")
+ inverseStackTest_emissionUnitId StackTest[] @relation("StackTest_emissionUnitId")
+ inverseControlDevice_emissionUnitId ControlDevice[] @relation("ControlDevice_emissionUnitId")
+ inverseDeviationEvent_emissionUnitId DeviationEvent[] @relation("DeviationEvent_emissionUnitId")
+}
+
+model PermitCondition {
+ id String @id @default(cuid())
+ title String
+ pollutant String
+ limitValue Float
+ unit String
+ averagingPeriod String
+ ruleVersion String
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionFacilityId EmissionFacility @relation("PermitCondition_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model ActivityReading {
+ id String @id @default(cuid())
+ title String
+ emissionUnitId String
+ observedAt DateTime
+ quantity Float
+ unit String
+ source String
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionUnitId EmissionUnit @relation("ActivityReading_emissionUnitId", fields: [emissionUnitId], references: [id], onDelete: Restrict)
+ linkedEmissionFacilityId EmissionFacility @relation("ActivityReading_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model EmissionFactor {
+ id String @id @default(cuid())
+ title String
+ emissionUnitId String
+ pollutant String
+ factor Float
+ unit String
+ sourceVersion String
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionUnitId EmissionUnit @relation("EmissionFactor_emissionUnitId", fields: [emissionUnitId], references: [id], onDelete: Restrict)
+ linkedEmissionFacilityId EmissionFacility @relation("EmissionFactor_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model StackTest {
+ id String @id @default(cuid())
+ title String
+ emissionUnitId String
+ testedAt DateTime
+ pollutant String
+ measuredValue Float
+ unit String
+ laboratory String
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionUnitId EmissionUnit @relation("StackTest_emissionUnitId", fields: [emissionUnitId], references: [id], onDelete: Restrict)
+ linkedEmissionFacilityId EmissionFacility @relation("StackTest_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model ControlDevice {
+ id String @id @default(cuid())
+ title String
+ emissionUnitId String
+ deviceType String
+ inspectionAt DateTime
+ observations String
+ nextDueAt DateTime
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionUnitId EmissionUnit @relation("ControlDevice_emissionUnitId", fields: [emissionUnitId], references: [id], onDelete: Restrict)
+ linkedEmissionFacilityId EmissionFacility @relation("ControlDevice_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model DeviationEvent {
+ id String @id @default(cuid())
+ title String
+ emissionUnitId String
+ startedAt DateTime
+ endedAt DateTime
+ cause String
+ correctiveAction String
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionUnitId EmissionUnit @relation("DeviationEvent_emissionUnitId", fields: [emissionUnitId], references: [id], onDelete: Restrict)
+ linkedEmissionFacilityId EmissionFacility @relation("DeviationEvent_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model EmissionReport {
+ id String @id @default(cuid())
+ title String
+ periodStart DateTime
+ periodEnd DateTime
+ preparer String
+ calculationReference String
+ submissionReceipt String?
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionFacilityId EmissionFacility @relation("EmissionReport_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model OperationalTask {
+ id String @id @default(cuid())
+ title String
+ owner String
+ priority String
+ startAt DateTime
+ dueAt DateTime
+ done Boolean
+ notes String?
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionFacilityId EmissionFacility @relation("OperationalTask_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model RuleVersion {
+ id String @id @default(cuid())
+ title String
+ jurisdiction String
+ version String
+ effectiveAt DateTime
+ expiresAt DateTime?
+ sourceUrl String
+ requirementText String
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionFacilityId EmissionFacility @relation("RuleVersion_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}
+
+model DocumentRequirement {
+ id String @id @default(cuid())
+ title String
+ category String
+ requiredBy DateTime
+ sourceReference String
+ evidenceReference String?
+ reviewNotes String?
+ status String @default("Draft")
+ emissionFacilityId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([emissionFacilityId])
+ linkedEmissionFacilityId EmissionFacility @relation("DocumentRequirement_emissionFacilityId", fields: [emissionFacilityId], references: [id], onDelete: Restrict)
+}

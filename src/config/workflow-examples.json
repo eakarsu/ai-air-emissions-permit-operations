@@ -1,0 +1,354 @@
+{
+  "permit-condition-extraction": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare permit condition extraction for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to permit condition extraction. Attach real approved sources separately."
+      },
+      "id": "permit-condition-extraction-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare permit condition extraction for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to permit condition extraction. Attach real approved sources separately."
+      },
+      "id": "permit-condition-extraction-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare permit condition extraction for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to permit condition extraction. Attach real approved sources separately."
+      },
+      "id": "permit-condition-extraction-3"
+    }
+  ],
+  "activity-evidence-reconciliation": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare activity evidence reconciliation for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to activity evidence reconciliation. Attach real approved sources separately."
+      },
+      "id": "activity-evidence-reconciliation-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare activity evidence reconciliation for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to activity evidence reconciliation. Attach real approved sources separately."
+      },
+      "id": "activity-evidence-reconciliation-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare activity evidence reconciliation for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to activity evidence reconciliation. Attach real approved sources separately."
+      },
+      "id": "activity-evidence-reconciliation-3"
+    }
+  ],
+  "stack-test-comparison": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare stack test comparison for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to stack test comparison. Attach real approved sources separately."
+      },
+      "id": "stack-test-comparison-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare stack test comparison for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to stack test comparison. Attach real approved sources separately."
+      },
+      "id": "stack-test-comparison-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare stack test comparison for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to stack test comparison. Attach real approved sources separately."
+      },
+      "id": "stack-test-comparison-3"
+    }
+  ],
+  "deviation-narrative-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare deviation narrative draft for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to deviation narrative draft. Attach real approved sources separately."
+      },
+      "id": "deviation-narrative-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare deviation narrative draft for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to deviation narrative draft. Attach real approved sources separately."
+      },
+      "id": "deviation-narrative-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare deviation narrative draft for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to deviation narrative draft. Attach real approved sources separately."
+      },
+      "id": "deviation-narrative-draft-3"
+    }
+  ],
+  "control-device-maintenance-brief": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare control-device maintenance brief for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to control-device maintenance brief. Attach real approved sources separately."
+      },
+      "id": "control-device-maintenance-brief-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare control-device maintenance brief for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to control-device maintenance brief. Attach real approved sources separately."
+      },
+      "id": "control-device-maintenance-brief-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare control-device maintenance brief for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to control-device maintenance brief. Attach real approved sources separately."
+      },
+      "id": "control-device-maintenance-brief-3"
+    }
+  ],
+  "annual-report-narrative": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare annual report narrative for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to annual report narrative. Attach real approved sources separately."
+      },
+      "id": "annual-report-narrative-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare annual report narrative for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to annual report narrative. Attach real approved sources separately."
+      },
+      "id": "annual-report-narrative-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare annual report narrative for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to annual report narrative. Attach real approved sources separately."
+      },
+      "id": "annual-report-narrative-3"
+    }
+  ],
+  "evidence-completeness-review": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-3"
+    }
+  ],
+  "operations-handoff-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 06-1.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 06-2.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 06-3.",
+        "sourceContext": "Fictional training scenario for Industrial plants and environmental consultants. Translate reviewed permit conditions into monitoring tasks; reconcile emissions logs; manage deviations and reporting packets. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-3"
+    }
+  ]
+}

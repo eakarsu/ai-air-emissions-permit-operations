@@ -1,0 +1,56 @@
+[
+  {
+    "id": "domain-calculation",
+    "title": "Emission factor calculation",
+    "operation": "emissions",
+    "example": {
+      "ruleSource": "Fictional demonstration rule v1; replace with reviewed applicable terms",
+      "activityUnits": 1000,
+      "factorKgPerUnit": 0.2,
+      "controlEfficiencyPercent": 90,
+      "limitKg": 25
+    },
+    "description": "Compute uncontrolled and controlled kilograms from supplied factors and efficiency, then compare a matching-period limit."
+  },
+  {
+    "id": "evidence-check",
+    "operation": "evidence",
+    "title": "Emission Facility evidence checklist",
+    "description": "Check source presence against an explicitly supplied document list; reviewer assesses adequacy.",
+    "example": {
+      "requirements": [
+        {
+          "id": "source-1",
+          "requirement": "Emission Unit evidence",
+          "evidence": "Example source reference"
+        },
+        {
+          "id": "source-2",
+          "requirement": "Reviewed rule version",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "deadline-check",
+    "operation": "deadlines",
+    "title": "Operational deadline queue",
+    "description": "Compute overdue items from entered dates and completed flags; no external notifications.",
+    "example": {
+      "asOf": "2026-10-20T12:00:00Z",
+      "items": [
+        {
+          "id": "review-1",
+          "dueAt": "2026-10-18T00:00:00Z",
+          "completed": false
+        },
+        {
+          "id": "follow-up-1",
+          "dueAt": "2026-10-23T00:00:00Z",
+          "completed": false
+        }
+      ]
+    }
+  }
+]
