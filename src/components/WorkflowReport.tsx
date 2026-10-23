@@ -14,6 +14,8 @@ export type WorkflowAnalysis = {
   explanations?: { issue: string; reason: string; citations: string[] }[];
   model: string;
   contextRows?: number;
+  aiGenerated?: boolean;
+  sections?: { label: string; value: unknown }[];
 };
 
 function reportText(result: WorkflowAnalysis, title: string) {
@@ -46,11 +48,12 @@ export default function WorkflowReport({ result, title, actions }: {
   }
   return <article aria-label={`${title} report`} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
     <header className="border-b border-slate-200 bg-slate-50 p-5">
-      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">OpenRouter report</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{result.aiGenerated === false ? "Deterministic fallback \u2014 no provider call (aiGenerated: false)" : "OpenRouter report"}</p>
       <h3 className="mt-1 text-xl font-semibold text-slate-900">{title}</h3>
       <p className="mt-2 whitespace-pre-wrap text-sm leading-7 text-slate-700">{result.summary}</p>
     </header>
     <div className="space-y-6 p-5">
+      {result.sections?.length ? <section><h4 className="mb-3 font-semibold text-slate-900">Labelled sections</h4><dl className="grid gap-3 sm:grid-cols-2">{result.sections.map((s, i) => <div key={i} className="rounded-lg bg-slate-50 p-3"><dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">{s.label}</dt><dd className="mt-1 text-sm text-slate-900">{s.value === false ? "No" : s.value === true ? "Yes" : s.value === "" ? "\u2014 (empty)" : String(s.value)}</dd></div>)}</dl></section> : null}
       <section><h4 className="mb-3 font-semibold text-slate-900">Findings</h4>{result.findings.length ? <ul className="space-y-2">{result.findings.map((item, index) => <li key={index} className="rounded-lg bg-slate-50 p-3 text-sm leading-6 text-slate-700">{item}</li>)}</ul> : <p className="text-sm text-slate-500">No findings were returned.</p>}</section>
       <section><h4 className="mb-3 font-semibold text-slate-900">Suggested actions</h4>{result.recommendations.length ? <ol className="space-y-3">{result.recommendations.map((item, index) => <li key={index} className="flex gap-3 text-sm leading-6 text-slate-700"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 font-semibold text-slate-600">{index + 1}</span><span>{item}</span></li>)}</ol> : <p className="text-sm text-slate-500">No actions were suggested.</p>}</section>
       {result.citations?.length ? <section><h4 className="mb-2 font-semibold text-slate-900">Evidence references</h4><ul className="flex flex-wrap gap-2">{result.citations.map((id, index) => <li key={`${id}:${index}`} className="break-all rounded border bg-slate-50 px-2 py-1 text-xs text-slate-600">{id}</li>)}</ul></section> : null}
